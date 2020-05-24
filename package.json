@@ -5,7 +5,8 @@
   "author": "Kasper Mikiewicz",
   "license": "MIT",
   "scripts": {
-    "dev": "tsc --watch"
+    "dev": "tsc --watch",
+    "prepare": "tsc"
   },
   "files": [
     "lib"
