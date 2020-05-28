@@ -5,18 +5,40 @@
   "author": "Kasper Mikiewicz",
   "license": "MIT",
   "scripts": {
+    "build": "tsc",
     "dev": "tsc --watch",
     "prepare": "tsc"
   },
   "files": [
     "lib"
   ],
+  "keywords": [
+    "typescript",
+    "typescript-plugin",
+    "test",
+    "jest",
+    "expect"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idered/typescript-expect-plugin.git"
+  },
+  "homepage": "https://github.com/idered/typescript-expect-plugin#readme",
+  "bugs": {
+    "url": "https://github.com/idered/typescript-expect-plugin/issues"
+  },
+  "engines": {
+    "node": ">=10"
+  },
   "dependencies": {
     "byots": "^4.0.0-dev.20200523.13.57",
     "expect": "^26.0.1",
     "read-pkg-up": "^7.0.1",
     "tmp": "^0.2.1",
     "ts-node": "^8.10.1"
+  },
+  "peerDependencies": {
+    "typescript": ">=3.7.0"
   },
   "devDependencies": {
     "@types/node": "^14.0.1",
