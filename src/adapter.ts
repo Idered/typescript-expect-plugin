@@ -169,7 +169,6 @@ export class Adapter {
       file: sourceFile,
       messageText: item.content,
       start: item.pos,
-      source: sourceFile.fileName,
       length: item.end - item.pos - 1,
       code: TS_LANGSERVICE_EXPECT_DIAGNOSTIC_ERROR_CODE,
     }));
