@@ -8,7 +8,11 @@ import {
   TS_LANGSERVICE_EXPECT_DIAGNOSTIC_ERROR_CODE,
 } from "./consts";
 
-register();
+register({
+  compilerOptions: {
+    target: "ESNext",
+  },
+});
 
 export type ESLintAdapterOptions = {
   logger: (msg: string) => void;
