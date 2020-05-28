@@ -75,7 +75,22 @@ function executeTest(
   } = {}
 ) {
   const expectTags = getJSDocExpectTags(node);
-  const fileModule = getTemporaryFile(node);
+  try {
+    var fileModule = getTemporaryFile(node);
+  } catch (err) {
+    if (err.diagnosticText) {
+      const [, pos, end] = err.diagnosticText.match(/\((\d+),(\d+)\)/);
+      messageBag.add({
+        pos,
+        end,
+        content: err.diagnosticText,
+      });
+    }
+  }
+
+  if (!fileModule) {
+    return;
+  }
 
   for (const tag of expectTags) {
     try {
