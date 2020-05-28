@@ -5,24 +5,6 @@ import getTemporaryFile from "./get-temporary-file";
 import { getJSDocExpectTags } from "./get-expect-tag";
 import { MessageBag } from "./message-bag";
 
-export function log(data) {
-  let cache = [];
-  console.log(
-    "hello",
-    JSON.stringify(data, (key, value) => {
-      if (typeof value === "object" && value !== null) {
-        // Duplicate reference found, discard key
-        if (cache.includes(value)) return;
-
-        // Store value in our collection
-        cache.push(value);
-      }
-      return value;
-    })
-  );
-  cache = null;
-}
-
 export default (node: ts.Node, messageBag: MessageBag) => {
   let defaultExport: ts.Identifier;
   let namedExports: ts.Identifier[] = [];
@@ -60,9 +42,7 @@ export default (node: ts.Node, messageBag: MessageBag) => {
         }
       }
     });
-  } catch (err) {
-    log({ err: true, message: err.message });
-  }
+  } catch (err) {}
 };
 
 function hasNamedExport(
