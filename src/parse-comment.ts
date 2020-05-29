@@ -13,7 +13,7 @@ function parseComment(comment: string) {
   return {
     params: JSON.parse(params),
     matcher,
-    result: isUndefined ? undefined : JSON.parse(result),
+    result: isUndefined ? [undefined] : JSON.parse(`[${result}]`),
   };
 }
 

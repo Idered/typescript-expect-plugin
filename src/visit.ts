@@ -105,7 +105,7 @@ function executeTest(
           expect(fileModule[functionName](...params))
         );
       if (typeof call === "function") {
-        call(result);
+        call(...result);
       }
     } catch (err) {
       messageBag.add({
