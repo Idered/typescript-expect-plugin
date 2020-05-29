@@ -85,7 +85,28 @@ export function sum(a: number, b: number) {
 export function has(haystack: any[], needle: any) {
   return haystack.includes(needle);
 }
+
+/**
+ * @expect [[2, 8], [9, 12]] toEqual [2, 8, 9, 12]
+ */
+export function join(arr1: any[], arr2: any[]) {
+  return [...arr1, ...arr2];
+}
+
+/**
+ * @expect [{"firstName": "John"}, "lastName", "Doe"] toHaveProperty "lastName", "Doe Doe"
+ */
+export function withProp(obj: Record<string, any>, key: string, value: any) {
+  return {...obj, [key]: value}
+}
 ```
+
+> ### Test objects
+![](https://i.imgur.com/ZplL1PV.gif)
+
+> ### Test arrays
+
+![](https://i.imgur.com/epox4Pu.gif)
 
 ## Author
 
