@@ -62,7 +62,7 @@ This plugin adds support for `@expect` JSDoc tag. It has the following usage pat
 ```
 
 - `[PARAMS]` - for example `[2, 4]` will spread two arguments to tested function.
-- `CONDITION` - check function from jest expect library. Use `ctrl+.` to see autocomplete suggestions.
+- `CONDITION` - check function from jest expect library. Use `ctrl+space` to see autocomplete suggestions.
 - `CONDITION_PARAMETER` - argument passed to `CONDITION` function.
 
 ## Examples
