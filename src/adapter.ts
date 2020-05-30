@@ -63,6 +63,18 @@ export class Adapter {
     const source = (this.getSourceFile(fileName) as unknown) as bts.SourceFile;
     const token = bts.getTokenAtPosition(source, position);
 
+    if (bts.isJSDocTag(token) && original) {
+      original.entries = [
+        ...original.entries,
+        {
+          kind: ScriptElementKind.keyword,
+          kindModifiers: "",
+          name: "expect",
+          sortText: "0",
+        },
+      ];
+    }
+
     if (bts.isInComment(source, position) && bts.isJSDoc(token)) {
       if (!original) {
         original = {
