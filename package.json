@@ -1,7 +1,7 @@
 {
   "name": "typescript-expect-plugin",
   "description": "Be lazy, write simple tests in comments",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": "lib/index.js",
   "author": "Kasper Mikiewicz",
   "license": "MIT",
