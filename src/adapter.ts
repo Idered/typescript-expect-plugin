@@ -44,8 +44,9 @@ export class Adapter {
       const sourceFile = this.getSourceFile(fileName);
       if (!sourceFile) return original;
       visit(sourceFile, this.messageBag);
-
-      const diagnostics = this.transformErrorsToDiagnostics(sourceFile);
+      const diagnostics = original.length
+        ? []
+        : this.transformErrorsToDiagnostics(sourceFile);
       return [...original, ...diagnostics];
     } catch (error) {
       this.logger(error.message ? error.message : "unknown error");
