@@ -6,6 +6,12 @@
     alt="CI"
     src="https://github.com/Idered/typescript-expect-plugin/workflows/CI/badge.svg?event=push"
   />
+  <a
+    href="https://gitter.im/typescript-expect-plugin/community?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge"
+    ><img
+      alt="Gitter"
+      src="https://badges.gitter.im/typescript-expect-plugin/community.svg"
+  /></a>
   <a href="https://twitter.com/intent/follow/?screen_name=Idered">
     <img alt="twitter" src="https://img.shields.io/twitter/follow/Idered?style=social" />
   </a>
